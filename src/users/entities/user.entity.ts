@@ -8,8 +8,8 @@ import {
   OneToMany,
 } from 'typeorm';
 
-import { Destination } from 'src/destinations/entities/destination.entity';
-import { Collection } from 'src/collections/entities/collection.entity';
+import { Destination } from '../../destinations/entities/destination.entity';
+import { Collection } from '../../collections/entities/collection.entity';
 @Entity()
 @Unique(['email']) // ensures that the email is unique in the database
 export class User {

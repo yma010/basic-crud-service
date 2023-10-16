@@ -5,8 +5,8 @@ import {
   OneToMany,
   ManyToOne,
 } from 'typeorm';
-import { Listing } from 'src/listings/entities/listing.entity';
-import { User } from 'src/users/entities/user.entity';
+import { Listing } from '../../listings/entities/listing.entity';
+import { User } from '../../users/entities/user.entity';
 
 @Entity()
 export class Destination {

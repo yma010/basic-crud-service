@@ -3,9 +3,12 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { getDatabaseConfig } from 'config/db.config';
 import { CollectionsModule } from './collections/collections.module';
 import { ListingsModule } from './listings/listings.module';
+import { UsersModule } from './users/users.module';
+import { DestinationsModule } from './destinations/destinations.module';
+import { getDatabaseConfig } from './config/db.config';
+
 @Module({
   imports: [
     ConfigModule.forRoot(),
@@ -16,8 +19,12 @@ import { ListingsModule } from './listings/listings.module';
     }),
     CollectionsModule,
     ListingsModule,
+    UsersModule,
+    DestinationsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule {
+  constructor() {}
+}
